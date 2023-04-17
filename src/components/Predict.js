@@ -44,7 +44,7 @@ export default function Predict() {
         if (file) {
             const formData = new FormData();
             formData.append("image", file);
-            const data = await fetch("https://flask-production-6bd2.up.railway.app/predict", {
+            const data = await fetch(process.env.FLASK_APP, {
                 method: 'POST',
                 body: formData,
             });
@@ -66,7 +66,7 @@ export default function Predict() {
         setOutput(null);
         setPredicted(null)
 
-        const imageUpload = await fetch("http://localhost:2000/api/uploadImage", {
+        const imageUpload = await fetch(process.env.REACT_APP_HOST+"/uploadImage", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

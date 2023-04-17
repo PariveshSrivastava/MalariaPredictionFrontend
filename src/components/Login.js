@@ -9,7 +9,7 @@ export default function Login() {
     const navigate = useNavigate()
 
     async function loginUser() {
-        const response = await fetch('http://localhost:2000/api/login',{
+        const response = await fetch(process.env.REACT_APP_HOST  +'/login',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
