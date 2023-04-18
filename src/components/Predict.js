@@ -42,6 +42,7 @@ export default function Predict() {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         if (file) {
+            console.log("flask api "+process.env.FLASK_APP);
             const formData = new FormData();
             formData.append("image", file);
             const data = await fetch(process.env.FLASK_APP, {
