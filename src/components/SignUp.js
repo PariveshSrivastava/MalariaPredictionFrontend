@@ -81,7 +81,7 @@ export default function SignUp() {
             //     navigate('/Login')
             // }
 
-            fetch("http://localhost:2000/api/register", {
+            fetch(process.env.REACT_APP_HOST+"/register", {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify({
