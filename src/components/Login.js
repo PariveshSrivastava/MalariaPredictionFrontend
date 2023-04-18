@@ -22,7 +22,7 @@ export default function Login() {
         
         const data = await response.json()
 
-        if(data.user){
+        if(data.status){
             localStorage.clear();
             localStorage.setItem('token', data.user)
 
