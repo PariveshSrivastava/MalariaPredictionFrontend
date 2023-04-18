@@ -36,7 +36,7 @@ export default function SignUp() {
     }
 
     async function verifyOtp() {
-        const response = await fetch('http://localhost:2000/api/verify', {
+        const response = await fetch(process.env.REACT_APP_HOST+'/verify', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
