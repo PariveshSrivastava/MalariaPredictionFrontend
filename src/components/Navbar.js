@@ -37,7 +37,7 @@ export default function NavbarUser(props) {
                                 {/* <a href="index.html">
                                 Research Portal
                             </a> */}
-                                <Link to="/" className="outline-none">SiteName</Link>
+                                <Link to="/" className="outline-none">MalariaPred</Link>
                             </span>
                         </div>
 

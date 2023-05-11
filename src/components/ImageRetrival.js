@@ -6,7 +6,7 @@ export default function ImageRetrival() {
   useEffect(() => {
     async function getImages() {
       const response = await fetch(process.env.RREACT_APP_HOST+'/fetchImage', {
-        method: 'POST',
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json'
         }
