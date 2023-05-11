@@ -20,6 +20,7 @@ export default function NavbarUser(props) {
     }
 
 
+    
     const logout = () => {
         localStorage.clear();
         // setIsLoggedIn(isLoggedIn => !isLoggedIn)
