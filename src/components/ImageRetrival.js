@@ -65,7 +65,7 @@ import React from 'react'
 
 export default function ImageRetrival() {
   return (
-    <div><img src = "./image.png">
+    <div><img src = "image.png">
       </img></div>
   )
 }
