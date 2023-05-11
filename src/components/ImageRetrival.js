@@ -12,7 +12,7 @@ export default function ImageRetrival() {
         }
       });
       const data = await response.json();
-      console.log(data);
+      console.log(data.images);
       setImages(data.images);
     }
     getImages();
@@ -36,9 +36,9 @@ export default function ImageRetrival() {
                 <tr key={row._id}>
                   <td><img className="img-thumbnail" src={row.image} alt="input" /></td>
                   <td className="text-center">{row.prediction}</td>
-                  <td className="text-center">{row.label ? <p className="text-success">Correct</p> : <p className="text-danger">Wrong</p>}</td>
+                  <td className="text-center">{row.truth ? <p className="text-success">Correct</p> : <p className="text-danger">Wrong</p>}</td>
                 </tr>
-              ) : null
+              ) : <p>no images :(</p>
           }
         </tbody>
       </table>
