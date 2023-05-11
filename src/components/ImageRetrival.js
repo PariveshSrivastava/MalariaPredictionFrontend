@@ -12,6 +12,7 @@ export default function ImageRetrival() {
         }
       });
       const data = await response.json();
+      console.log(data);
       setImages(data.images);
     }
     getImages();
