@@ -10,7 +10,7 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Footer from './components/Footer';
 import Peridct from './components/Predict.js';
-import ImageRetrival from './components/ImageRetrival';
+import ImageRetrival from './components/ImageRetrival.js';
 
 export default function App() {
   return (
