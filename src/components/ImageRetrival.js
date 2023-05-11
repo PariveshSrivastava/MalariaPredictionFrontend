@@ -1,7 +1,19 @@
 import React, { useState, useEffect } from 'react'
+import jwt_decode from "jwt-decode";
 
 export default function ImageRetrival() {
   const [images, setImages] = useState([]);
+
+  let dataToken
+
+    if (localStorage.getItem('token') !== null) {
+        let token = localStorage.getItem('token')
+
+        dataToken = jwt_decode(token)
+
+    }
+
+  let username = dataToken.name;
 
   useEffect(() => {
     async function getImages() {
@@ -9,7 +21,10 @@ export default function ImageRetrival() {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
+        body: JSON.stringify({
+          username: username,
+        })
       });
       const data = await response.json();
       console.log(data.images);
